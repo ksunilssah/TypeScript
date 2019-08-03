@@ -1,0 +1,19 @@
+{
+  "name": "typescript-demo",
+  "version": "1.0.0",
+  "description": "typescript basic",
+  "main": "type.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ksunilssah/TypeScript.git"
+  },
+  "author": "Sunil",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ksunilssah/TypeScript/issues"
+  },
+  "homepage": "https://github.com/ksunilssah/TypeScript#readme"
+}

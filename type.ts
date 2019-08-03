@@ -1,11 +1,14 @@
 // Types in typescript
 
+//number
 let num: number;
 num = 10;
 
+//string
 let text: string = 'test';
 let bool: boolean = true;
 
+//any
 let arr: any[] = ["test", "test"];
 
 //Array
@@ -29,7 +32,7 @@ let complex2: objectInof = {
 
 //union types
 let myRealReaAge: number | string  = 27;
-//myRealReaAge = '27';
+myRealReaAge = '27';
 
 if(typeof myRealReaAge == 'number') {
     console.log('my age is in numbers');
@@ -39,5 +42,36 @@ if(typeof myRealReaAge == 'number') {
 function neverReturnFunction(): never {
     throw new Error('This function will never return');
 }
+//neverReturnFunction();
 
-neverReturnFunction();
+
+//Nullable types
+let canBeNull: number | null = 21;
+canBeNull = null;
+console.log(canBeNull);
+let canAlsoBeNull;
+canAlsoBeNull =  null;
+console.log(canAlsoBeNull);
+
+
+//Exercise
+type bankType = {money: number, deposit: (value: number) => void } ;
+let bankAccount: bankType = {
+    money: 2000,
+    deposit(value){
+        this.money += value;
+    }
+}
+
+let mySelf : { name: string, bankAccount: bankType, hobbies: string[]} = {
+    name: 'Sunil',
+    bankAccount: bankAccount,
+    hobbies: ['sports', 'cooking']
+}
+
+mySelf.bankAccount.deposit(3000);
+console.log(mySelf);
+
+//
+var temp;
+temp =10;
